@@ -5,6 +5,7 @@ Este proyecto esta enfocado en la automatización de la Aplicacion appianCloud d
 ## 🚀 Comenzando
 
 ### 🚧 Prerrequisitos
+````````
 Antes de ejecutar este proyecto, debes tener instalados los siguientes programas en tu computadora:
 
 - Intelij IDEA.
@@ -12,6 +13,7 @@ Antes de ejecutar este proyecto, debes tener instalados los siguientes programas
 - Cucumber framwork.
 - Apache Maven.
 - Navegadores web Google Chrome.
+````````
 
 ### 🔗 Dependencias
 
@@ -119,29 +121,31 @@ Este proyecto utiliza las siguientes dependencias:
   https://github.com/mjerezgit/PruebaPracticaImpera.git
 
 2. Instala las dependencias.    
-
-   mvn clean install
-   ```
+    ```
+   copiar y pegar las antes referenciadas en el archivo POM.xml
+   
 
 ### 🌐 Aplicación bajo prueba
+````
 * https://impera.appiancloud.com/suite/?signin=native
   
   Aplicacion appianCloud de impera
-
+````
 ### 👨🏼‍🔬 Pruebas
-
-Este proyecto contiene una lista de casos de pruebas por suite que responden a la demanda de regresion de los diferentes equipos que trabajan en T24. 
-
+``````
+Este proyecto contiene una clase steps los culaes contiene los casos a ejecutar.
+``````
 #### 🧪 Casos de Prueba
+``````
  Scenario1: Ingresar a Appian a travez del login.
  Scenario2: Navegación al módulo de pruebas.
  Scenario3: Completar Formulario Data Input y validar creación del registro.
- 
+ ``````
 #### 🏃🏽 Cómo ejecutar las pruebas
-
-#### 🚦 Ejecutar un caso de prueba
+``````
 Para ejecutar las pruebas de este proyecto:
 - navegar hacia src/test/java/runner y abrir la clase TestRunner.
 - dentro de la clase proceder a ejecutar la misma.
+``````
 
 
