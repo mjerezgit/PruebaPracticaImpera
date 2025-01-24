@@ -14,7 +14,6 @@ import utils.DriverManager;
 
 public class Test {
 
-   // private WebDriver driver;
     private WebDriver driver= Hooks.getDriver();
 
     @Given("^El usuario ingresa a la pagina de Appian$")

@@ -9,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import utils.DriverManager;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -18,20 +17,12 @@ public class Hooks{
 
     private static WebDriver driver;
     private DriverManager driverManager;
-
-
     public Hooks() {}
+
 @Before
     public void openBrowser() {
-        //String url = "https://impera.appiancloud.com/suite?signin=native";
         driver = DriverManager.getDriver();
-       // driver.get(url);
-       // driver.manage().window().maximize();
     }
-    public void closedDriver(){
-        driver.quit();
-}
-
 
     @After
     public void tearDown(Scenario scenario) throws IOException {
@@ -40,9 +31,9 @@ public class Hooks{
             File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
             // Guardar la captura de pantalla en una ubicación
-            String screenshotPath = "screenshots/" + scenario + ".png";
+            String screenshotPath = "/screenshots/" + scenario + ".png";
             try {
-                FileUtils.copyFile(screenshotFile, new File("target/" + screenshotPath));
+                FileUtils.copyFile(screenshotFile, new File(screenshotPath));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
